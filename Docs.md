@@ -1,50 +1,46 @@
-R.F. 01 - Registro de usuário no sistema: permite que novos usuários se cadastrem para acessar o site e realizar compras.
+**R.F. 01** - Registro de usuário no sistema: permite que novos usuários se cadastrem para acessar o site e realizar compras.
 Dados necessários: nome, e-mail, senha, endereço.
 
-Usuários: visitantes.
+Usuários: Visitantes
+
+Tipo: Registro
 
 R.F. 02 - Registro de produto pelo administrador: permite o cadastro de novos produtos naturais no sistema.
 Dados necessários: nome do produto, categoria, preço, imagem, descrição, quantidade em estoque.
 
-Usuários: administrador.
+Usuários: Administrador
 
-Tipo: Funções Administrativas / Gestão de Dados.
+Tipo: Registro
 
 R.F. 03 - Inserção de item no carrinho de compras: permite ao usuário adicionar produtos selecionados ao carrinho.
 Dados necessários: produto, quantidade, ID do usuário (sessão).
 
 Usuários: cliente autenticado.
 
-Tipo: Gestão de Dados / Regulamentos de Negócio.
+Tipo: Gestão/Dados
 
-🔄 Processamentos
+//🔄 Processamentos//
+
 R.F. 04 - Autenticação de usuário: autentica o acesso do usuário ao sistema, garantindo segurança e acesso à sua conta.
-Dados necessários: e-mail, senha.
+Dados necessários: e-mail, senha
 
-Usuários: todos os níveis de usuário.
+Usuários: Todos os usuários.
 
-Tipo: Níveis de autorização.
+Tipo: Autorização
 
-R.F. 05 - Processamento de pedido (checkout): processa as informações do carrinho, endereço e pagamento para gerar o pedido.
-Dados necessários: produtos, endereço, forma de pagamento, cupom (opcional).
+R.F. 05 - Processamento de pedido: processa as informações do carrinho, endereço e pagamento para gerar o pedido.
+Dados necessários: produtos, endereço, forma de pagamento
 
-Usuários: cliente autenticado.
+Usuários: cliente autenticado
 
 Tipo: Gestão de Dados / Interfaces Externas (pagamento).
 
-R.F. 06 - Aplicação de cupom de desconto: valida e aplica o cupom inserido conforme as regras de negócio.
-Dados necessários: código do cupom, valor do pedido, categoria dos produtos.
+R.F. 07 - Atualização de status do pedido: atualiza o pedido com os status: “em deslocamento”, “enviado”, “entregue”.
+Dados necessários: ID do pedido, status.
 
-Usuários: cliente autenticado.
+Usuários: administrador, cliente autenticado (apenas visualização)
 
-Tipo: Regulamentos de Negócio.
-
-R.F. 07 - Atualização de status do pedido: atualiza o pedido com os status: “em processamento”, “enviado”, “entregue”.
-Dados necessários: ID do pedido, status novo.
-
-Usuários: administrador, cliente autenticado (apenas visualização).
-
-Tipo: Regulamentos de Negócio / Rastreamento de auditoria.
+Tipo: Status / Regulamentos de Negócio
 
 R.F. 08 - Avaliação de produtos: permite que o usuário avalie e comente produtos adquiridos.
 Dados necessários: nota, comentário, ID do produto, ID do pedido.
@@ -54,7 +50,7 @@ Usuários: cliente autenticado.
 Tipo: Gestão de Dados.
 
 📤 Saídas
-R.F. 09 - Exibição de listagem de produtos: mostra ao cliente todos os produtos disponíveis para compra com filtros.
+R.F. 09 - Listagem de produtos: mostra ao cliente todos os produtos disponíveis para compra com filtros.
 Dados necessários: nome do produto, imagem, preço, descrição curta, categoria.
 
 Usuários: todos os usuários.
@@ -71,13 +67,15 @@ Tipo: Gestão de Dados.
 R.F. 11 - Relatório de pedidos realizados: exibe histórico de pedidos do cliente.
 Dados necessários: número do pedido, data, status, valor total, itens comprados.
 
+
+R.F. 10 - Exibição de detalhes de produto: mostra 
 Usuários: cliente autenticado.
 
-Tipo: Requisitos de relatório.
+Tipo: Relatório de compras.
 
 R.F. 12 - Relatório de vendas por produto: exibe ao administrador dados sobre quantidade de vendas por item.
 Dados necessários: nome do produto, total de vendas, receita gerada.
 
 Usuários: administrador.
 
-Tipo: Requisitos de relatório.
+Tipo: Relatorio de vendas.
