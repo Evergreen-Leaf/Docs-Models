@@ -1,4 +1,4 @@
-1 - Registro de usuário no sistema: permite que novos usuários se cadastrem para acessar o site e realizar compras.
+R.F. 01 - Registro de usuário no sistema: permite que novos usuários se cadastrem para acessar o site e realizar compras.
 Dados necessários: nome, e-mail, senha, endereço.
 
 Usuários: visitantes.
